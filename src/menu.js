@@ -3,6 +3,27 @@ import './menu.css';
 import { Link } from 'react-router-dom'
 
 class Menu extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      markdown: undefined
+    }
+  }
+
+  componentWillMount() {
+    const readmePath = require("./Menu.md");
+  
+    fetch(readmePath)
+      .then(response => {
+        return response.text()
+      })
+      .then(text => {
+        this.setState({
+          markdown: text
+        })
+      })
+  }
+
   render() {
 
     return (
@@ -11,7 +32,7 @@ class Menu extends Component {
           Dislexia
         </div>
         <div className="descripcion">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+          { this.state.markdown }
         </div>
         <div className="botones">
           <Link to="/test">Test</Link>
