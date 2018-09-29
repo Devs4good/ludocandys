@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Ejercicio from "./Ejercicio";
 import { Route, Switch } from 'react-router';
 import Menu from './menu.js';
+import Test from './Test.js';
 
 
 class App extends Component {
@@ -10,8 +10,7 @@ class App extends Component {
     return (
       <div className="App">
           <Switch>
-              <Route exact path="/ejercicio3" component={() => <Ejercicio tamanio={3}/>}/>
-              <Route exact path="/ejercicio4" component={() => <Ejercicio tamanio={4}/>}/>
+              <Route exact path="/test" component={Test}/>
               <Route path="*" component={Menu}/>
           </Switch>
       </div>

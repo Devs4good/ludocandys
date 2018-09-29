@@ -38,8 +38,7 @@ class Menu extends Component {
           { this.state.texto }
         </div>
         <div className="botones">
-          <Link to="/ejercicio3">Test 3x3</Link>
-          <Link to="/ejercicio4">Test 4x4</Link>
+          <Link to="/test">Test</Link>
           <button onClick={() => null}>Más Info</button>
         </div>
         

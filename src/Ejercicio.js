@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import shuffle from "./arrayUtils";
+import "./Ejercicio.css";
 
 class Ejercicio extends Component {
     constructor(props){
         super(props);
+        //TODO: reemplazar por diccionario de letras
         let universo = shuffle(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'u', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r']);
         let letras = universo.slice(0, props.tamanio * props.tamanio);
         let ganadora = letras[0];
@@ -12,41 +14,47 @@ class Ejercicio extends Component {
         this.state = {
             letras: shuffle(letras),
             ganadora: ganadora,
-            tamanio: props.tamanio
+            tamanio: props.tamanio,
+            resultado: ''
         };
     }
 
     render() {
         return (
             <div className="matriz">
-                { [...Array(this.state.tamanio)].map(() => this.dibujarFila(this.state.tamanio)) }
+                <div>{ this.state.resultado }</div>
+                { [...Array(this.state.tamanio).keys()].map((i) => this.dibujarFila(this.state.tamanio, i)) }
             </div>
         );
     }
 
-    dibujarFila(tamanio) {
+    dibujarFila(tamanio, i) {
         return (
-            <div className="fila">
-                { [...Array(tamanio)].map(() => this.dibujarLetra()) }
+            <div className="fila" key={'fila-' + i}>
+                { [...Array(tamanio).keys()].map((x) => this.dibujarLetra(i * tamanio + x)) }
             </div>
         );
     }
 
-    dibujarLetra() {
-        let letra = this.state.letras.pop();
+    dibujarLetra(i) {
+        let letra = this.state.letras[i];
+        //TODO: colorear las letras con rojo o verde si son correctas o incorrectas.
         return (
-            <div className="letra">
-                <button onClick={() => this.seleccionarLetra(letra)}>{letra}</button>
+            <div className="letra" key={letra} onClick={() => this.seleccionarLetra(letra)}>
+                {letra}
             </div>
         );
     }
 
     seleccionarLetra(letra) {
-        if (letra === this.state.ganadora) {
-            console.log("OK")
+        let esAcierto = letra === this.state.ganadora;
+
+        if (esAcierto) {
+            this.setState({resultado: 'Acertaste!'})
         } else {
-            console.log("Pifiaste");
+            this.setState({resultado: `Pifiaste! La letra era: ${this.state.ganadora}`})
         }
+        this.props.alTerminar(esAcierto)
     }
 }
 
