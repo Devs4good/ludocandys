@@ -6,10 +6,12 @@ class Ejercicio extends Component {
         super(props);
         let universo = shuffle(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'u', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r']);
         let letras = universo.slice(0, props.tamanio * props.tamanio);
+        let ganadora = letras[0];
+        console.log(ganadora);
 
         this.state = {
-            letras: letras,
-            ganadora: letras[0],
+            letras: shuffle(letras),
+            ganadora: ganadora,
             tamanio: props.tamanio
         };
     }
