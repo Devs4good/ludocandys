@@ -4,6 +4,11 @@ Martin Salias (Developer), mail: martin.salias@kleer.la
 Matias Melendi (Developer), mail: mmelendi@10pines.com
 Jasmina (Developer), mail: jasminasf@gmail.com
 Martin Gonzales (Developer) mail: martinegonzalez95@gmail.com
-Ramiro Reibaldi (LugoCanDys)  mail: reibaldiramiro@gmail.com
-Manuel Nuñez (LugoCanDys) mail: manuelingolotti@gmail.com
-Rosario Castillo (LugoCanDys) mail: roocastiillo12@gmail.com
+Mariano Stampella (Scrum Master), mail: mstampella@gmail.com
+
+Alumnos del Colegio Mano Amiga de Fatima Pilar.
+Ramiro Reibaldi (Product Owner)  mail: reibaldiramiro@gmail.com
+Manuel Nuñez (Product Owner) mail: manuelingolotti@gmail.com
+Rosario Castillo (Product Owner) mail: roocastiillo12@gmail.com
+
+Profe: Gladys Cabral, mail glacabral10@gmail.com
