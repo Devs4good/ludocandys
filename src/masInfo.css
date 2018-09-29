@@ -14,8 +14,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 60vh;
-  min-height: 560px;
+  height: 20em;
 }
 
 .botones{
