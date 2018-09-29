@@ -6,7 +6,8 @@ class Menu extends Component {
   constructor(props){
     super(props);
     this.state = {
-      markdown: undefined
+      titulo: undefined,
+      texto: undefined
     }
   }
 
@@ -18,8 +19,10 @@ class Menu extends Component {
         return response.text()
       })
       .then(text => {
+        let json = JSON.parse(text);
         this.setState({
-          markdown: text
+          titulo: json.titulo,
+          texto: json.texto
         })
       })
   }
@@ -29,10 +32,10 @@ class Menu extends Component {
     return (
       <div className="pagina">   
         <div className="titulo">
-          Dislexia
+        { this.state.titulo }
         </div>
         <div className="descripcion">
-          { this.state.markdown }
+          { this.state.texto }
         </div>
         <div className="botones">
           <Link to="/ejercicio3">Test 3x3</Link>

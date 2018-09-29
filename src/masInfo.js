@@ -1,16 +1,40 @@
 import React, { Component } from 'react';
-import './menu.css';
+import './masInfo.css';
 
 
 class MasInfo extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      titulo: undefined,
+      texto: undefined
+    }
+  }
+
+  componentWillMount() {
+    const readmePath = require("./Menu.md");
+  
+    fetch(readmePath)
+      .then(response => {
+        return response.text()
+      })
+      .then(text => {
+        let json = JSON.parse(text);
+        this.setState({
+          titulo: json.titulo,
+          texto: json.texto
+        })
+      })
+  }
+
   render() {
     return (
       <div className="pagina">   
         <div className="titulo">
-          Más Info
+        { this.state.titulo }
         </div>
         <div className="descripcion">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+        { this.state.texto }
         </div>
         <div className="botones">
           <button onClick={() => null}>Test</button>
