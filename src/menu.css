@@ -1,0 +1,23 @@
+.titulo{
+  text-align: center;
+  font-size: xx-large;  
+}
+
+.descripcion{
+  text-align: center;
+  font-size: medium;
+  width: 60%;  
+}
+
+.pagina{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20em;
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+}
