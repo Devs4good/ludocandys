@@ -14,8 +14,7 @@ class Menu extends Component {
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
         </div>
         <div className="botones">
-          <Link to="/ejercicio3">Test 3x3</Link>
-          <Link to="/ejercicio4">Test 4x4</Link>
+          <Link to="/test">Test</Link>
           <button onClick={() => null}>Más Info</button>
         </div>
         

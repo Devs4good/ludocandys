@@ -1,0 +1,17 @@
+.matriz {
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+}
+
+.letra {
+    border: #222222;
+    border-style: solid;
+    width: 30%;
+    height: 30%;
+}
