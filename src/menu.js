@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './menu.css';
+import { Link } from 'react-router-dom'
 
 class Menu extends Component {
   constructor(props){
@@ -34,8 +35,8 @@ class Menu extends Component {
           { this.state.markdown }
         </div>
         <div className="botones">
-          <button onClick={() => null}>Test</button>
-          <br/>
+          <Link to="/ejercicio3">Test 3x3</Link>
+          <Link to="/ejercicio4">Test 4x4</Link>
           <button onClick={() => null}>Más Info</button>
         </div>
         
