@@ -11,7 +11,7 @@ class Letra extends Component {
 
   render(){ 
     return(
-      <div className={this.state.tipoDeLetra} key={this.props.letra} 
+      <div className={this.state.tipoDeLetra + ' notranslate'} key={this.props.letra}
           onClick={() => {
               this.props.funcion(this.props.letra);
               this.setState({tipoDeLetra: this.props.letra === this.props.ganadora? "letraVerde": "letraRoja"});
