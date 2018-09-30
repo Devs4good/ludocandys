@@ -1,0 +1,22 @@
+.letra {
+  border: #222222;
+  border-style: solid;
+  width: 30%;
+  height: 30%;
+}
+
+.letraVerde {
+  border: #222222;
+  border-style: solid;
+  width: 30%;
+  height: 30%;
+  background-color: green;
+}
+
+.letraRoja {
+  border: #222222;
+  border-style: solid;
+  width: 30%;
+  height: 30%;
+  background-color: red;
+}

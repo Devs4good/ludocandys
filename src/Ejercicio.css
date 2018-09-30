@@ -9,9 +9,8 @@
     flex-direction: row;
 }
 
-.letra {
-    border: #222222;
-    border-style: solid;
-    width: 30%;
-    height: 30%;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

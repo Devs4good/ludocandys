@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './masInfo.css';
+import { Link } from 'react-router-dom'
 
 
 class MasInfo extends Component {
@@ -12,7 +13,7 @@ class MasInfo extends Component {
   }
 
   componentWillMount() {
-    const readmePath = require("./Menu.md");
+    const readmePath = require("./MasInfo.md");
   
     fetch(readmePath)
       .then(response => {
@@ -37,9 +38,9 @@ class MasInfo extends Component {
         { this.state.texto }
         </div>
         <div className="botones">
-          <button onClick={() => null}>Test</button>
+          <Link to="/test">Test</Link>
           <br/>
-          <button onClick={() => null}>Conocenos</button>
+          <Link to="">Conocenos</Link>
         </div>
       </div>  
     );

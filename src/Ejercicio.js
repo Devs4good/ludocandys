@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import shuffle from "./arrayUtils";
 import "./Ejercicio.css";
+import Letra from "./Letra.js";
 
 class Ejercicio extends Component {
     constructor(props){
@@ -15,15 +16,19 @@ class Ejercicio extends Component {
             letras: shuffle(letras),
             ganadora: ganadora,
             tamanio: props.tamanio,
-            resultado: ''
+            resultado: '',
+            yaJugo: false
         };
     }
 
     render() {
         return (
-            <div className="matriz">
-                <div>{ this.state.resultado }</div>
-                { [...Array(this.state.tamanio).keys()].map((i) => this.dibujarFila(this.state.tamanio, i)) }
+            <div className="container">
+                <p>Seleccioná la letra {this.state.ganadora}:</p>
+                <div className="matriz">
+                    <div>{ this.state.resultado }</div>
+                    { [...Array(this.state.tamanio).keys()].map((i) => this.dibujarFila(this.state.tamanio, i)) }
+                </div>
             </div>
         );
     }
@@ -37,12 +42,8 @@ class Ejercicio extends Component {
     }
 
     dibujarLetra(i) {
-        let letra = this.state.letras[i];
-        //TODO: colorear las letras con rojo o verde si son correctas o incorrectas.
         return (
-            <div className="letra" key={letra} onClick={() => this.seleccionarLetra(letra)}>
-                {letra}
-            </div>
+            <Letra letra={this.state.letras[i]} ganadora={this.state.ganadora} funcion={() => this.seleccionarLetra(this.state.letras[i]) }/>
         );
     }
 
@@ -52,7 +53,7 @@ class Ejercicio extends Component {
         if (esAcierto) {
             this.setState({resultado: 'Acertaste!'})
         } else {
-            this.setState({resultado: `Pifiaste! La letra era: ${this.state.ganadora}`})
+            this.setState({resultado: 'Pifiaste!'})
         }
         this.props.alTerminar(esAcierto)
     }

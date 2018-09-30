@@ -39,7 +39,8 @@ class Menu extends Component {
         </div>
         <div className="botones">
           <Link to="/test">Test</Link>
-          <button onClick={() => null}>Más Info</button>
+          <br/>
+          <Link to="/masInfo">Más Info</Link>
         </div>
         
       </div>  

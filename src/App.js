@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch } from 'react-router';
 import Menu from './menu.js';
 import Test from './Test.js';
+import MasInfo from './masInfo.js';
 
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
           <Switch>
               <Route exact path="/test" component={Test}/>
+              <Route exact path="/masInfo" component={MasInfo}/>
               <Route path="*" component={Menu}/>
           </Switch>
       </div>
