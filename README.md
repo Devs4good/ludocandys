@@ -1,3 +1,15 @@
+LexGo
+
+Introducción
+El proyecto comenzó en base al trabajo de Rosario Castillo (roocastiillo12@gmail.com), Ramiro Reibaldi (reibaldiramiro@gmail.com) y Manuel Nuñez (manuelingolotti@gmail.com) desde el colegio Mano Amiga de Fatima Pilar, coordinados por la profesora Gladys Cabral. (mail glacabral10@gmail.com)
+
+El proyecto fue presentado en DevelopersForGood (https://developersforgood.com/) que se realizó en las oficinas de intive-FDV (www.intive.com) durante el 29 y 30 de Septiembre de 2018. 
+
+En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail.com), Martin Gonzales (martinegonzalez95@gmail.com), Matias Melendi (mmelendi@10pines.com), Rocio Santarcieri (rociosantar@gmail.com) y Martin Salias (martin.salias@kleer.la).
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
