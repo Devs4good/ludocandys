@@ -13,6 +13,8 @@ class Test extends Component {
       };
     }
       handleClick(ver){
+        console.log("ping");
+        this.forceUpdate();
         this.setState({examen: ++this.state.examen});
         this.setterTamanio();
         if (this.state.examen>10) {
@@ -23,6 +25,7 @@ class Test extends Component {
         }else {
           this.setState({respuestaMal:++this.state.respuestaMal})
         }
+
       }
       setterTamanio(){
         if (this.state.examen>5) {
@@ -32,7 +35,7 @@ class Test extends Component {
     render() {
       //TODO: ejecutar 5 ejercicios consecutivamente. Guardar el estado de cada ejercicio
       return (
-          <Ejercicio tamanio={3} alTerminar={(acierto) => this.handleClick(acierto)}/>
+          <Ejercicio tamanio={this.state.size} alTerminar={(acierto) => this.handleClick(acierto)}/>
       );
     }
 }
