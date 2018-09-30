@@ -1,4 +1,4 @@
-# LexGo
+# Nodix
 
 ## Introducción
 El proyecto comenzó en base al trabajo de Rosario Castillo (roocastiillo12@gmail.com), Ramiro Reibaldi (reibaldiramiro@gmail.com) y Manuel Nuñez (manuelingolotti@gmail.com) desde el colegio Mano Amiga de Fatima Pilar, coordinados por la profesora Gladys Cabral. (mail glacabral10@gmail.com)
