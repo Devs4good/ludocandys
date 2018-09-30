@@ -7,6 +7,7 @@ El proyecto fue presentado en DevelopersForGood (https://developersforgood.com/)
 
 En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail.com), Martin Gonzales (martinegonzalez95@gmail.com), Matias Melendi (mmelendi@10pines.com), Rocio Santarcieri (rociosantar@gmail.com) y Martin Salias (martin.salias@kleer.la).
 
+El diseño de las pantallas estuvo a cargo de Rocio que estuvo trabajando con los chicos.
 
 
 
