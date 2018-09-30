@@ -1,14 +1,19 @@
-LexGo
+# Nodix
 
-Introducción
+## Introducción
 El proyecto comenzó en base al trabajo de Rosario Castillo (roocastiillo12@gmail.com), Ramiro Reibaldi (reibaldiramiro@gmail.com) y Manuel Nuñez (manuelingolotti@gmail.com) desde el colegio Mano Amiga de Fatima Pilar, coordinados por la profesora Gladys Cabral. (mail glacabral10@gmail.com)
 
 El proyecto fue presentado en DevelopersForGood (https://developersforgood.com/) que se realizó en las oficinas de intive-FDV (www.intive.com) durante el 29 y 30 de Septiembre de 2018. 
 
 En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail.com), Martin Gonzales (martinegonzalez95@gmail.com), Matias Melendi (mmelendi@10pines.com), Rocio Santarcieri (rociosantar@gmail.com) y Martin Salias (martin.salias@kleer.la).
 
+El diseño de las pantallas estuvo a cargo de Rocio que estuvo trabajando con los chicos.
 
+Nos ayudo haciendo el Logo, Carlos Carreño que también nos ayudó con el nombre
 
+## Aspectos Técnicos
+
+El proyecto fue realizado utilizando React y a continuación copiamos algunas de las cuestiones básicas para utilizar el framework
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
