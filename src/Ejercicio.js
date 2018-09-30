@@ -6,8 +6,8 @@ import Letra from "./Letra.js";
 class Ejercicio extends Component {
     constructor(props){
         super(props);
-        //TODO: reemplazar por diccionario de letras
-        let universo = shuffle(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'u', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r']);
+        let diccionario = 'abcdefghijklmnñopqrstuvwxyz'.split('');
+        let universo = shuffle(diccionario);
         let letras = universo.slice(0, props.tamanio * props.tamanio);
         let ganadora = letras[0];
         console.log(ganadora);
