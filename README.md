@@ -9,7 +9,7 @@ En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail
 
 El diseño de las pantallas estuvo a cargo de Rocio que estuvo trabajando con los chicos.
 
-Nos ayudo haciendo el Logo, Carlos Carreño. 
+Nos ayudo haciendo el Logo, Carlos Carreño que también nos ayudó con el nombre
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
