@@ -7,7 +7,7 @@ La app no va a ser pública para todas las personas sino para que la utilicen lo
 
 El proyecto fue presentado en DevelopersForGood (https://developersforgood.com/) que se realizó en las oficinas de intive-FDV (www.intive.com) durante el 29 y 30 de Septiembre de 2018. 
 
-En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail.com), Martin Gonzales (martinegonzalez95@gmail.com), Matias Melendi (mmelendi@10pines.com), Rocio Santarcieri (rociosantar@gmail.com) y Martin Salias (martin.salias@kleer.la) y Mariano Stampella (mstampella@gmail.com)
+En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail.com), Martin Gonzalez (martin.gonzalez@10pines.com), Matias Melendi (mmelendi@10pines.com), Rocio Santarcieri (rociosantar@gmail.com) y Martin Salias (martin.salias@kleer.la) y Mariano Stampella (mstampella@gmail.com)
 
 El diseño de las pantallas estuvo a cargo de Rocio que estuvo trabajando con los chicos.
 
