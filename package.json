@@ -1,6 +1,10 @@
 {
   "name": "ludo-candys",
   "version": "0.1.0",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
   "private": true,
   "dependencies": {
     "history": "^4.7.2",
