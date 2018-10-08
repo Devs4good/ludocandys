@@ -16,7 +16,7 @@ class Test extends Component {
 
     handleClick() {
         setTimeout(()=> {
-            this.setState({ examen: ++this.state.examen });
+            this.setState({ examen: this.state.examen + 1});
             this.setterTamanio();
 
             if (this.state.examen > 10) {
@@ -37,9 +37,9 @@ class Test extends Component {
               <Ejercicio key={`ejercicio-${this.state.examen}`} tamanio={this.state.size} alTerminar={(acierto) => {
                   this.handleClick();
                   if(acierto){
-                      this.setState({respuestaBien: ++this.state.respuestaBien})
+                      this.setState({respuestaBien: this.state.respuestaBien  + 1})
                   } else {
-                      this.setState({respuestaMal: ++this.state.respuestaMal})
+                      this.setState({respuestaMal: this.state.respuestaMal  + 1})
                   }
               }}/>
           </div>
