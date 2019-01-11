@@ -2,8 +2,8 @@
   text-align: center;
 }
 .logo{
-  width: 200px;
-  margin: 0 auto;
+  height: 70px;
+  margin: 15px auto;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
