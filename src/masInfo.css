@@ -1,12 +1,13 @@
 .titulo{
   text-align: center;
-  font-size: xx-large;  
+  font-size: xx-large;
 }
 
 .descripcion{
   text-align: center;
   font-size: medium;
-  width: 60%;  
+  line-height: 1.4;
+  width: 70%;
 }
 
 .pagina{
