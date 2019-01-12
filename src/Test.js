@@ -1,60 +1,44 @@
-import React, { Component } from 'react';
-import Ejercicio from "./Ejercicio";
-
-class Test extends Component {
-    constructor(props){
-      super(props);
-
-      this.state={
-        examen: 1,
-        size: 3,
-        respuestaBien: 0,
-        respuestaMal: 0,
-        timer: 0,
+class Test {
+    constructor(history, limiteDeRespuestas) {
+      this.estado = {
+        limiteDeRespuestas: limiteDeRespuestas,
+        respuestas: 0,
+        resultadoDelTest: {
+            respuestasCorrectas: 0,
+            respuestasIncorrectas: 0,
+        },
+        timer: '10:00',
       };
+      this.history = history;
     }
 
-    handleClick() {
-        setTimeout(()=> {
-            this.setState({ examen: this.state.examen + 1});
-            this.setterTamanio();
-
-            if (this.state.examen > 10) {
-                this.irAResultados();
-            }
-        }, 1000);
+    haFinalizado() {
+        return this.estado.respuestas === this.estado.limiteDeRespuestas
     }
 
-    setterTamanio(){
-        if (this.state.examen > 5) {
-          this.setState({ size: 4 });
+    registrarRespuesta(esAcierto) {
+        this.estado.respuestas++;
+
+        if(esAcierto){
+            this.estado.resultadoDelTest.respuestasCorrectas++;
+        } else {
+            this.estado.resultadoDelTest.respuestasIncorrectas++;
         }
-    }
 
-    render() {
-      return (
-          <div>
-              <Ejercicio key={`ejercicio-${this.state.examen}`} tamanio={this.state.size} alTerminar={(acierto) => {
-                  this.handleClick();
-                  if(acierto){
-                      this.setState({respuestaBien: this.state.respuestaBien  + 1})
-                  } else {
-                      this.setState({respuestaMal: this.state.respuestaMal  + 1})
-                  }
-              }}/>
-          </div>
-      );
+        if (this.haFinalizado()) {
+            this.irAResultados()
+        }
     }
 
     irAResultados(){
         let rutaResultados = {
             pathname: '/resultado',
             state: {
-                respuestasCorrectas: this.state.respuestaBien,
-                tiempoRecord: '10:00'
+                respuestasCorrectas: this.estado.resultadoDelTest.respuestasCorrectas,
+                tiempoRecord: this.estado.timer
             }
         };
-        this.props.history.push(rutaResultados);
+        this.history.push(rutaResultados);
     }
 }
 

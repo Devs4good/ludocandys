@@ -13,7 +13,7 @@ class Resultado extends Component {
                 <h4>Tiempo Record</h4>
                 {this.props.tiempoRecord}
 
-                <Link to='/test'> Jugar </Link>
+                <Link to='/listado-de-ejercicios'> Jugar </Link>
                 <Link to="/masInfo">Más Info</Link>
             </div>
         );
