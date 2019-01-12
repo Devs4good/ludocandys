@@ -21,7 +21,7 @@ class Ejercicio extends Component {
     render() {
         return (
             <div className="container">
-                <p>Seleccioná la letra {this.state.ganadora}:</p>
+                <p className="seleccion-de-letra">Seleccioná la letra {this.state.ganadora}:</p>
                 <div className="matriz">
                     <div className="resultado-ejercicio">{ this.state.resultado }</div>
                     { [...Array(this.state.tamanio).keys()].map((i) => this.dibujarFila(this.state.tamanio, i)) }

@@ -20,7 +20,8 @@ header{
 
 .logo{
   height: 70px;
-  margin: 15px auto;
+  margin:0 auto;
+  display:block;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
