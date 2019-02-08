@@ -7,24 +7,26 @@ class MasInfo extends Component {
   constructor(props){
     super(props);
     this.state = {
-      titulo: undefined,
-      texto: undefined,
-      url_video: "https://www.youtube.com/embed?v=qLNY5hl0w8I",
+      primerTitulo: undefined,
+      segundoTitulo: undefined,
+      primerTexto: undefined,
+      segundoTexto: undefined,
+      urlVideo: 'https://www.youtube-nocookie.com/embed/sys8XcTbnw8',
     }
   }
 
   componentWillMount() {
     const readmePath = require("./MasInfo.md");
-  
+
     fetch(readmePath)
-      .then(response => {
-        return response.text()
-      })
+      .then(response => response.text())
       .then(text => {
-        let json = JSON.parse(text);
+        const json = JSON.parse(text);
         this.setState({
-          titulo: json.titulo,
-          texto: json.texto
+          primerTitulo: json.primerTitulo,
+          segundoTitulo: json.segundoTitulo,
+          primerTexto: json.primerTexto,
+          segundoTexto: json.segundoTexto
         })
       })
   }
@@ -33,15 +35,21 @@ class MasInfo extends Component {
     return (
       <div className="pagina">
         <div className="titulo">
-        { this.state.titulo }
+        { this.state.primerTitulo }
         </div>
         <div className="descripcion">
-        { this.state.texto }
+        { this.state.primerTexto }
         </div>
         <div className="video">
-          <iframe width="300" height="200" src={this.state.urlVideo} frameBorder="0"
+          <iframe width="300" height="200" src={this.state.urlVideo} frameBorder="0" title="videoDislexia"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen />
+        </div>
+        <div className="titulo">
+          { this.state.segundoTitulo }
+        </div>
+        <div className="descripcion">
+          { this.state.segundoTexto }
         </div>
         <div className="botones">
           <Link to="/test">Test</Link>
