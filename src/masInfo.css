@@ -1,12 +1,15 @@
 .titulo{
   text-align: center;
-  font-size: xx-large;  
+  font-size: xx-large;
+  margin: 1em;
 }
 
 .descripcion{
   text-align: center;
   font-size: medium;
-  width: 60%;  
+  line-height: 1.4;
+  width: 70%;
+  margin-bottom: 1em;
 }
 
 .pagina{
@@ -14,7 +17,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 20em;
+  height: auto;
 }
 
 .botones{
