@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './masInfo.css';
 import { Link } from 'react-router-dom';
+import TituloYDescripcion from './tituloYDescripcion';
 
 
 class MasInfo extends Component {
@@ -34,23 +35,13 @@ class MasInfo extends Component {
   render() {
     return (
       <div className="pagina">
-        <div className="titulo">
-        { this.state.primerTitulo }
-        </div>
-        <div className="descripcion">
-        { this.state.primerTexto }
-        </div>
+        <TituloYDescripcion titulo={this.state.primerTitulo} descripcion={this.state.primerTexto}/>
         <div className="video">
           <iframe width="300" height="200" src={this.state.urlVideo} frameBorder="0" title="videoDislexia"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen />
         </div>
-        <div className="titulo">
-          { this.state.segundoTitulo }
-        </div>
-        <div className="descripcion">
-          { this.state.segundoTexto }
-        </div>
+        <TituloYDescripcion titulo={this.state.segundoTitulo} descripcion={this.state.segundoTexto}/>
         <div className="botones">
           <Link to="/test">Test</Link>
           <br/>
