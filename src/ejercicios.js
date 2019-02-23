@@ -9,9 +9,17 @@ export default class Ejercicios {
     }
 
     conId(id) {
-        let ejercicio = this.ejercicios.find((unEjercicio) => { return unEjercicio.props.id === id });
+        let ejercicio = this.buscarEjercicio(id);
 
-        return <ejercicio.component {...ejercicio.props} />;
+        if (ejercicio === undefined) {
+            const ejercicioDefault = this.buscarEjercicio(1);
+            return <ejercicioDefault.component {...ejercicioDefault.props} />
+        } else
+            return <ejercicio.component {...ejercicio.props} />;
+    }
+
+    buscarEjercicio(id) {
+      return this.ejercicios.find((unEjercicio) => unEjercicio.props.id === id)
     }
 
     todos() {
