@@ -17,6 +17,12 @@
 }
 
 .resultado-ejercicio {
-    font-size: 1em;
-    height: 20px;
+    font-size: 1.5em;
+    line-height: 2em;
+    height: 2em;
+}
+
+.seleccion-de-letra {
+    margin-top: 10%;
+    font-size: 2em;
 }

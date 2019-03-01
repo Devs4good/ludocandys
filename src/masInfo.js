@@ -43,7 +43,7 @@ class MasInfo extends Component {
         </div>
         <TituloYDescripcion titulo={this.state.segundoTitulo} descripcion={this.state.segundoTexto}/>
         <div className="botones">
-          <Link to="/test">Test</Link>
+          <Link to="/listado-de-ejercicios">Jugar</Link>
           <br/>
           <Link to="">Conocenos</Link>
         </div>

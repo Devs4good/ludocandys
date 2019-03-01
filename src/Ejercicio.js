@@ -6,25 +6,22 @@ import Letra from "./Letra.js";
 class Ejercicio extends Component {
     constructor(props){
         super(props);
-        let diccionario = 'abcdefghijklmnñopqrstuvwxyz'.split('');
-        let universo = shuffle(diccionario);
-        let letras = universo.slice(0, props.tamanio * props.tamanio);
-        let ganadora = letras[0];
-        console.log(ganadora);
+        let {letras, ganadora} = this.recalcularLetrasYLetraGanadora();
 
         this.state = {
             letras: shuffle(letras),
             ganadora: ganadora,
             tamanio: props.tamanio,
             resultado: '',
-            yaJugo: false
+            id: props.id,
+            test: props.test
         };
     }
 
     render() {
         return (
             <div className="container">
-                <p>Seleccioná la letra {this.state.ganadora}:</p>
+                <p className="seleccion-de-letra">Seleccioná la letra {this.state.ganadora}:</p>
                 <div className="matriz">
                     <div className="resultado-ejercicio">{ this.state.resultado }</div>
                     { [...Array(this.state.tamanio).keys()].map((i) => this.dibujarFila(this.state.tamanio, i)) }
@@ -43,7 +40,7 @@ class Ejercicio extends Component {
 
     dibujarLetra(i) {
         return (
-            <Letra letra={this.state.letras[i]} ganadora={this.state.ganadora} funcion={() => this.seleccionarLetra(this.state.letras[i]) }/>
+            <Letra key={`letra-${i}-${this.state.letras[i]}`} letra={this.state.letras[i]} ganadora={this.state.ganadora} funcion={() => this.seleccionarLetra(this.state.letras[i]) }/>
         );
     }
 
@@ -55,7 +52,23 @@ class Ejercicio extends Component {
         } else {
             this.setState({resultado: 'Pifiaste!'})
         }
-        this.props.alTerminar(esAcierto)
+
+        this.state.test.registrarRespuesta(esAcierto);
+
+        setTimeout(() => {
+            if (!this.state.test.haFinalizado()) {
+                let {letras, ganadora} = this.recalcularLetrasYLetraGanadora();
+                this.setState({resultado: '', letras: shuffle(letras), ganadora: ganadora})
+            }
+        }, 1000);
+    }
+
+    recalcularLetrasYLetraGanadora() {
+        let diccionario = 'abcdefghijklmnñopqrstuvwxyz'.split('');
+        let universo = shuffle(diccionario);
+        let letras = universo.slice(0, this.props.tamanio * this.props.tamanio);
+        let ganadora = letras[0];
+        return {letras, ganadora};
     }
 }
 

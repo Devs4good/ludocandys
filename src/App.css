@@ -1,9 +1,27 @@
 .App {
   text-align: center;
+  /* esto deberia ser "todo el tamanio de la pantalla" */
+  height: 700px;
 }
+header{
+  height: 6em;
+  position: relative;
+}
+
+.logo-container{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1em 1em 2em 1em;
+  border-radius: 0 0 50% 50%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
 .logo{
   height: 70px;
-  margin: 15px auto;
+  margin:0 auto;
+  display:block;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -28,4 +46,67 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.listado-de-ejercicios {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.presentacion-ejercicio {
+  display: flex;
+  padding: 10% 2%;
+  flex-flow: column nowrap;
+  align-items: center;
+  flex-basis: auto;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  box-shadow: 0px -5px 5px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.listado-de-ejercicios div:first-child {
+  box-shadow: none;
+}
+
+.listado-de-ejercicios div:nth-child(3n+2) {
+  background-color: #FB4D4F;
+}
+
+.listado-de-ejercicios div:nth-child(3n+1) {
+  background-color: #FFCA01;
+}
+
+.listado-de-ejercicios div:nth-child(3n+0) {
+  background-color: #66E2DC;
+}
+
+.imagen-de-ejercicio img {
+  width: 50%;
+  padding: 2%;
+}
+
+.descripcion-de-ejercicio {
+  padding: 4%;
+}
+
+.titulo-ejercicio {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 600px) {
+  .presentacion-ejercicio {
+    font-size: 1em;
+  }
+
+  .descripcion-de-ejercicio {
+    font-size: 3em;
+  }
+
+  .titulo-ejercicio {
+    font-size: 5em;
+    text-transform: uppercase;
+  }
 }
