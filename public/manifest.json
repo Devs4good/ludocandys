@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Nodix",
+  "short_name": "Nodix",
+  "background_color": "#F9CA47",
   "icons": [
     {
       "src": "favicon.ico",
@@ -11,5 +12,5 @@
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait"
 }
