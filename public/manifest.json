@@ -1,7 +1,7 @@
 {
   "name": "Nodix",
   "short_name": "Nodix",
-  "background_color": "#F9CA47",
+  "background_color": "#FFFFFF",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,6 +16,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#F9CA47",
+  "theme_color": "#FFFFFF",
   "orientation": "portrait"
 }
