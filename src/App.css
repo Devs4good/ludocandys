@@ -1,8 +1,20 @@
 .App {
   text-align: center;
-  /* esto deberia ser "todo el tamanio de la pantalla" */
-  height: 700px;
 }
+
+body {
+  height: 100vh;
+}
+
+#root {
+  height: calc(100% - 6em);
+}
+
+.App, .listado-de-ejercicios {
+  min-height: 100%; /* Para evitar problemas con IE < 11 */
+  height: 100%;
+}
+
 header{
   height: 6em;
   position: relative;
@@ -55,15 +67,16 @@ header{
 
 .presentacion-ejercicio {
   display: flex;
-  padding: 10% 2%;
   flex-flow: column nowrap;
   align-items: center;
-  flex-basis: auto;
+  justify-content: center;
+  flex: 1;
   width: 100%;
   box-sizing: border-box;
   color: white;
   box-shadow: 0px -5px 5px rgba(0,0,0,.2);
   cursor: pointer;
+  min-height: 30vh;
 }
 
 .listado-de-ejercicios div:first-child {
@@ -88,7 +101,7 @@ header{
 }
 
 .descripcion-de-ejercicio {
-  padding: 4%;
+  padding: 0.5em;
 }
 
 .titulo-ejercicio {
