@@ -1,0 +1,53 @@
+.speech-recognition-container {
+  background-color: #FFCA01;
+  height: calc(100vh - 220px);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.speech-recognition-container div {
+  margin-bottom: 15px;
+}
+
+.exercise-container {
+  display: flex;
+}
+.speech-recognition-title {
+  font: Bold 85px/103px Helvetica Neue;
+  text-align: left;
+}
+
+.speech-reco-text {
+  width: 100%;
+  height: 208px;
+  text-align: left;
+  font: Regular 24px/29px Helvetica Neue;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 19px;
+  opacity: 1;
+  padding: 40px;
+}
+
+.speech-reco-text-container {
+  flex: 3;
+}
+
+.speech-reco-points-container {
+  flex: 2
+}
+
+.speech-reco-points-title {
+  font: Bold 46px/56px Helvetica Neue;
+}
+
+.speech-reco-points {
+  font: Bold 156px/191px Helvetica Neue;
+}
+
+.speech-reco-points-container button {
+  border: none;
+  background-color: white;
+  height: 40px;
+  font: Regular 16px/24px Helvetica Neue;
+}

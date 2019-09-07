@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import image from './image.png';
 import styles from './styles.css';
 
