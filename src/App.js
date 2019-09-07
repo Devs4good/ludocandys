@@ -6,8 +6,8 @@ import CustomNavBar from "./components/CustomNavBar";
 
 import Games from "./screens/Games";
 import Game1 from "./screens/Games/Game-1";
-import Game2 from "./screens/Games/Game-2";
 import Game3 from "./screens/Games/Game-3";
+import { DictationPage } from './screens/Games/Game-2/DictationPage';
 import Menu from "./screens/Menu";
 
 function App() {
@@ -17,8 +17,9 @@ function App() {
       <Switch>
         <Route path="/games" exact component={Games} />
         <Route path="/games/game-1" component={Game1} />
-        <Route path="/games/game-2" component={Game2} />
+        <Route path="/games/game-2" component={DictationPage} />
         <Route path="/games/game-3" component={Game3} />
+        <Route path="/dictado" component={DictationPage} />
         <Route path="*" component={Menu} />
       </Switch>
     </div>

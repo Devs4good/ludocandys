@@ -1,9 +1,13 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "OpenDyslexic Regular", sans-serif;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('OpenDyslexic Regular'), url('fonts/OpenDyslexic/OpenDyslexic-Regular.woff') format('woff');
 }
 
 code {
