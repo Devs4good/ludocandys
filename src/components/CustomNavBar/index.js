@@ -25,23 +25,23 @@ class CustomNavBar extends Component {
   render() {
     return (
       <div>
-      <Navbar color="light" light expand="md" className="navbar">
-        <img className="image" src={image} />
-        <Collapse navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">INICIO</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/components/">JUEGOS</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/components/">LOGIN</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+        <Navbar color="light" light expand="md" className="navbar">
+          <img className="image" src={image} />
+          <Collapse navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">INICIO</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/components/">JUEGOS</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/login/">LOGIN</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
     );
   };
 }
