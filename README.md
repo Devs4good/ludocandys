@@ -1,34 +1,68 @@
-# Nodix
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Introducción
-El proyecto comenzó en base al trabajo de Rosario Castillo (roocastiillo12@gmail.com), Ramiro Reibaldi (reibaldiramiro@gmail.com) y Manuel Nuñez (manuelingolotti@gmail.com) desde el colegio Mano Amiga de Fatima Pilar, coordinados por la profesora Gladys Cabral. (mail glacabral10@gmail.com). El objetivo de la app es que terapeutas, pedagogos y especialistas puedan utilizarla para medir el grado de disgrafia de diferentes personas. La disgrafía es un trastorno de la capacidad o la facultad de escribir. Por ahora solo hay un test que es reconocer letras, pero en el futuro la idea es agregar varios tests mas para poder tener un diagnóstico mas preciso. 
+## Available Scripts
 
-La app no va a ser pública para todas las personas sino para que la utilicen los terapeutas. 
+In the project directory, you can run:
 
-El proyecto fue presentado en DevelopersForGood (https://developersforgood.com/) que se realizó en las oficinas de intive-FDV (www.intive.com) durante el 29 y 30 de Septiembre de 2018. 
+### `npm start`
 
-En el evento se sumaron como colaboradores, Jasmina Sella Faena (jasminasf@gmail.com), Martin Gonzalez (martin.gonzalez@10pines.com), Matias Melendi (mmelendi@10pines.com), Rocio Santarcieri (rociosantar@gmail.com) y Martin Salias (martin.salias@kleer.la) y Mariano Stampella (mstampella@gmail.com)
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-El diseño de las pantallas estuvo a cargo de Rocio que estuvo trabajando con los chicos.
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-Nos ayudo haciendo el Logo, Carlos Carreño que también nos ayudó con el nombre
+### `npm test`
 
-Se puede ver la demo en: http://nodix.d4g.online/
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Aspectos Técnicos
+### `npm run build`
 
-El proyecto fue realizado utilizando React y a continuación copiamos algunas de las cuestiones básicas para utilizar el framework
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Si quieren seguir codeando acá está la explicación de lo que pudimos hacer en la hackathon: https://youtu.be/97TIw8Mr42M
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-### ¿Cómo levanto el server?
-```bash
-npm install # Sólo la primera vez, para instalar las dependencias
-npm start 
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### ¿Cómo corro los tests?
-```bash
-npm test
-```
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

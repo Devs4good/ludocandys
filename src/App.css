@@ -2,124 +2,32 @@
   text-align: center;
 }
 
-body {
-  height: 100vh;
-}
-
-#root {
-  height: calc(100% - 6em);
-}
-
-.App, .listado-de-ejercicios {
-  min-height: 100%; /* Para evitar problemas con IE < 11 */
-  height: 100%;
-}
-
-header{
-  height: 6em;
-  position: relative;
-}
-
-.logo-container{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 1em 1em 2em 1em;
-  border-radius: 0 0 50% 50%;
-  box-sizing: border-box;
-  background-color: white;
-}
-
-.logo{
-  height: 70px;
-  margin:0 auto;
-  display:block;
-}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.listado-de-ejercicios {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.presentacion-ejercicio {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  width: 100%;
-  box-sizing: border-box;
-  color: white;
-  box-shadow: 0px -5px 5px rgba(0,0,0,.2);
-  cursor: pointer;
-  min-height: 30vh;
-}
-
-.listado-de-ejercicios div:first-child {
-  box-shadow: none;
-}
-
-.listado-de-ejercicios div:nth-child(3n+2) {
-  background-color: #FB4D4F;
-}
-
-.listado-de-ejercicios div:nth-child(3n+1) {
-  background-color: #FFCA01;
-}
-
-.listado-de-ejercicios div:nth-child(3n+0) {
-  background-color: #66E2DC;
-}
-
-.imagen-de-ejercicio img {
-  width: 50%;
-  padding: 2%;
-}
-
-.descripcion-de-ejercicio {
-  padding: 0.5em;
-}
-
-.titulo-ejercicio {
-  font-size: 3em;
-  text-transform: uppercase;
-}
-
-@media only screen and (min-width: 600px) {
-  .presentacion-ejercicio {
-    font-size: 1em;
+  from {
+    transform: rotate(0deg);
   }
-
-  .descripcion-de-ejercicio {
-    font-size: 3em;
-  }
-
-  .titulo-ejercicio {
-    font-size: 5em;
-    text-transform: uppercase;
+  to {
+    transform: rotate(360deg);
   }
 }
