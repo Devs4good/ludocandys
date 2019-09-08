@@ -17,14 +17,12 @@ class CustomNavBar extends Component {
 
   render() {
     return (
-      
       <div className='navbarContainer'>
-
         <div>
-       <Link to="/">
-          <img className='image' alt="navbar" src={image} />
-       </Link>
-       </div>
+          <Link to='/'>
+            <img className='image' alt='navbar' src={image} />
+          </Link>
+        </div>
 
         <div className='buttonsContainer'>
           <button>
@@ -33,9 +31,9 @@ class CustomNavBar extends Component {
           <button>
             <Link to='/juegos'>JUEGOS</Link>
           </button>
-            <button>
+          <button>
             <Link to='/login'>LOGIN</Link>
-            </button>
+          </button>
         </div>
       </div>
     );
