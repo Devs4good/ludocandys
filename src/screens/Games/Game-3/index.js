@@ -10,25 +10,25 @@ const exercises = {
     img:
       "https://static.nationalgeographic.es/files/styles/image_470/public/2928.600x450.jpg",
     options: [
-      { text: "elefante", isValid: true },
-      { text: "elafente", isValid: false },
-      { text: "elefenta", isValid: false },
-      { text: "alefente", isValid: false },
-      { text: "elefnte", isValid: false }
-    ]
+      { text: 'elefante', isValid: true , id:1},
+      { text: 'elafente', isValid: false, id:1 },
+      { text: 'elefenta', isValid: false, id:1 },
+      { text: 'alefente', isValid: false, id:1 },
+      { text: 'elefnte', isValid: false, id:1 },
+    ],
   },
   2: {
     id: 2,
     img:
       "https://www.savethekoala.com/sites/savethekoala.com/files/uploads/koala_donate.jpg",
     options: [
-      { text: "koala", isValid: true },
-      { text: "kaola", isValid: false },
-      { text: "klaoa", isValid: false },
-      { text: "kalao", isValid: false },
-      { text: "kaalo", isValid: false }
-    ]
-  }
+      { text: 'koala', isValid: true , id: 2},
+      { text: 'kaola', isValid: false , id: 2},
+      { text: 'klaoa', isValid: false , id: 2},
+      { text: 'kalao', isValid: false , id: 2},
+      { text: 'kaalo', isValid: false , id: 2},
+    ],
+  },
 };
 
 const Game3 = props => {
@@ -51,7 +51,13 @@ const Game3 = props => {
 
   useEffect(() => {
     if (selectedOption.isValid) {
-      setTimeout(() => props.history.push("/juegos/que-ves/2"), 1000);
+      const nextExercise = exercises[selectedOption.id + 1]
+      console.log(nextExercise);
+      if (!nextExercise) {
+        props.history.push('/juegos/letra-correcta')
+        return;
+      }
+      setTimeout(() => props.history.push(`/juegos/que-ves/${nextExercise.id}`), 1000);
     }
     //eslint-disable-next-line
   }, [selectedOption]);
@@ -62,8 +68,8 @@ const Game3 = props => {
   */
 
   return (
-    <div className="game-container">
-      <div className="container">
+    <div className='game-container'>
+      <div className='container exercise-3'>
         <header>
           <h2>Selecciona lo que ves</h2>
           <h3>Ejercicio {id}</h3>
@@ -79,11 +85,8 @@ const Game3 = props => {
               return (
                 <label
                   className={`exercise-option ${
-                    selectedOption.text === option.text &&
-                    selectedOption.isValid === true
-                      ? "valid"
-                      : "invalid"
-                  }`}
+                    selectedOption.text === option.text ? (selectedOption.isValid === true ? 'valid' : 'invalid') : ''
+                    }`}
                   key={option.text}
                 >
                   {option.text}

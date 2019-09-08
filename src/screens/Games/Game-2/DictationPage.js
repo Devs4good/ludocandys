@@ -44,15 +44,6 @@ export class DictationPage extends React.Component {
     });
   }
 
-  goToPreviousExercise() {
-    this.setState({
-      exercise: ExercisesRepository.exercises()[1],
-      userInput: '',
-      previousExercise: false,
-      exerciseId: 1,
-    });
-  }
-
   onTextInput(event) {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -64,7 +55,7 @@ export class DictationPage extends React.Component {
     return (
       <div id='dictation-page'>
         <div className='dictation-exercise'>
-          <div className='dictation-exercise-title'>EJERCICIO #{exerciseId}</div>
+          <div className='dictation-exercise-title'>Ejercicio {exerciseId}</div>
           <div className='dictation-exercise-icons'>
             <img src={soundIcon} alt='Reproducir' onClick={() => Speak(exercise)} />
             <img src={spellingIcon} alt='Corregir' onClick={() => this.correct(exercise)} />
@@ -75,7 +66,6 @@ export class DictationPage extends React.Component {
           <div className='dictation-score-title'>PUNTOS</div>
           <div className='dictation-score-number'>{score}</div>
           <div className='dictation-score-button'>
-            {previousExercise ? <button onClick={() => this.goToPreviousExercise()}>Ejercicio anterior</button> : null}
             <button onClick={() => this.goToNextExercise()}>Proximo Ejercicio</button>
           </div>
         </div>

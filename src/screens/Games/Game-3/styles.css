@@ -2,7 +2,10 @@
   width: 100vw;
   padding: 21px 0;
   background-color: var(--yellow);
-  height: calc(100vh - var(--navbar-height));
+}
+
+.container.exercise-3 {
+  background-color: initial;
 }
 
 header h2 {
@@ -46,6 +49,7 @@ header h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5;
 }
 
 .exercise-option ~ .exercise-option {
@@ -54,4 +58,8 @@ header h3 {
 
 .exercise-option.valid {
   background-color: green;
+}
+
+.exercise-option.invalid {
+  background-color: red;
 }
