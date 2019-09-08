@@ -22,9 +22,14 @@ export class DictationPage extends React.Component {
   correct(exercise) {
     const result = SpeechComparer.compare(exercise, this.state.userInput);
 
+
     if (result.hasMatches) {
-      Speak('Has ganado cinco puntos');
-      this.setState({ score: result.score });
+      if (result.score) {
+        Speak(`Felicitaciones sumaste ${result.score === 2.5 ? '2,5' : result.score} puntos`);
+        this.setState({ score: result.score });
+      } else {
+        Speak("Prueba de nuevo!");
+      }
     } else {
       Speak('La cantidad de palabras no coincide');
     }
