@@ -1,13 +1,14 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import React, { useState, useMemo, useEffect } from "react";
+// import { Redirect } from 'react-router-dom';
 
 /* Styles */
-import './styles.css';
+import "./styles.css";
 
 const exercises = {
   1: {
     id: 1,
-    img: 'https://static.nationalgeographic.es/files/styles/image_470/public/2928.600x450.jpg',
+    img:
+      "https://static.nationalgeographic.es/files/styles/image_470/public/2928.600x450.jpg",
     options: [
       { text: 'elefante', isValid: true , id:1},
       { text: 'elafente', isValid: false, id:1 },
@@ -18,7 +19,8 @@ const exercises = {
   },
   2: {
     id: 2,
-    img: 'https://www.savethekoala.com/sites/savethekoala.com/files/uploads/koala_donate.jpg',
+    img:
+      "https://www.savethekoala.com/sites/savethekoala.com/files/uploads/koala_donate.jpg",
     options: [
       { text: 'koala', isValid: true , id: 2},
       { text: 'kaola', isValid: false , id: 2},
@@ -30,24 +32,22 @@ const exercises = {
 };
 
 const Game3 = props => {
-  const [selectedOption, setSelectedOption] = useState('');
-  console.log('TCL: selectedOption', selectedOption);
+  const [selectedOption, setSelectedOption] = useState("");
+  console.log("TCL: selectedOption", selectedOption);
 
   const {
     match: {
-      params: { id },
-    },
+      params: { id }
+    }
   } = props;
 
-  const selectedExcercise = useMemo(
-    () => {
-
-      if (!exercises[id]) return exercises[1];
-      return { ...exercises[id], options: exercises[id].options.sort(() => 0.5 - Math.random()) }
-
-    },
-    [id]
-  );
+  const selectedExcercise = useMemo(() => {
+    if (!exercises[id]) return exercises[1];
+    return {
+      ...exercises[id],
+      options: exercises[id].options.sort(() => 0.5 - Math.random())
+    };
+  }, [id]);
 
   useEffect(() => {
     if (selectedOption.isValid) {
@@ -59,8 +59,8 @@ const Game3 = props => {
       }
       setTimeout(() => props.history.push(`/juegos/que-ves/${nextExercise.id}`), 1000);
     }
+    //eslint-disable-next-line
   }, [selectedOption]);
-
 
   /*
     1. Si fallo lo ponemos en rojo
@@ -75,12 +75,12 @@ const Game3 = props => {
           <h3>Ejercicio {id}</h3>
         </header>
 
-        <div className='options-container'>
-          <div className='exercise-image'>
-            <img src={selectedExcercise.img} alt='-' />
+        <div className="options-container">
+          <div className="exercise-image">
+            <img src={selectedExcercise.img} alt="-" />
           </div>
 
-          <div className='exercise-options'>
+          <div className="exercise-options">
             {selectedExcercise.options.map(option => {
               return (
                 <label
@@ -91,7 +91,7 @@ const Game3 = props => {
                 >
                   {option.text}
                   <input
-                    type='radio'
+                    type="radio"
                     name={option.text}
                     value={option.text}
                     checked={selectedOption.text === option.text}

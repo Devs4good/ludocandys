@@ -55,7 +55,7 @@ export class DictationPage extends React.Component {
     return (
       <div id='dictation-page'>
         <div className='dictation-exercise'>
-          <div className='dictation-exercise-title'>EJERCICIO #{exerciseId}</div>
+          <div className='dictation-exercise-title'>Ejercicio {exerciseId}</div>
           <div className='dictation-exercise-icons'>
             <img src={soundIcon} alt='Reproducir' onClick={() => Speak(exercise)} />
             <img src={spellingIcon} alt='Corregir' onClick={() => this.correct(exercise)} />
