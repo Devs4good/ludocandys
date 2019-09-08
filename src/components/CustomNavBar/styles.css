@@ -21,4 +21,15 @@
   border: none;
   background-color: #ffffff;
   margin-right: 20px;
+  text-decoration: none;
+  transition: 1s;
+  height: 40px;
+  border-radius: 5px;
+
+  box-sizing: border-box;
+}
+.navbarContainer button:hover {
+  transform: scale(1.05);
+  color: #0d417a;
+  border: 2px solid #0d417a;
 }
