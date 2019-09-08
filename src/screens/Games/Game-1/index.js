@@ -93,6 +93,15 @@ const QueLees = ({ history }) => {
     testBtn.addEventListener('click', testSpeech);
   });
 
+  const goToNextExercise = () => {
+    const nextPhrase = phrases[Number(chosenPhrase.id) + 1];
+    if (!nextPhrase) history.push('dictado');
+    setChosenPhrase(nextPhrase);
+  }
+
+  const goToPreviousExercise  = () => {
+  }
+
   return (
     <div id='dictation-page' className='speech-page'>
       <div className='dictation-exercise speech-exercise'>
@@ -112,9 +121,12 @@ const QueLees = ({ history }) => {
       </div>
 
       <div className='dictation-score speech-score'>
-        <div className='dictation-score-title'>PUNTOS</div>
-        <div className='dictation-score-number'>{points}</div>
-      </div>
+          <div className='dictation-score-title'>PUNTOS</div>
+          <div className='dictation-score-number'>{points}</div>
+          <div className='dictation-score-button'>
+            <button onClick={() => goToNextExercise()}>Proximo Ejercicio</button>
+          </div>
+        </div>
     </div>
   );
 };

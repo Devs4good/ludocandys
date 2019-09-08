@@ -1,6 +1,6 @@
 #dictation-page {
   background-color: #ffca01;
-  height: calc(100vh - 120px);
+  height: calc(100vh - var(--navbar-height));
   display: flex;
 }
 
