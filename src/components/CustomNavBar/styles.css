@@ -6,25 +6,25 @@
 } */
 
 .navbarContainer {
-    display: flex;
-    justify-content: space-between;
-    height: 120px;
-    align-items: center;
-    padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  align-items: center;
+  padding: 50px;
 }
 
 .image {
-    margin-left: 20px;
-    width: 200px;
+  margin-left: 20px;
+  width: 200px;
 }
 
 .buttonsContainer {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .navbarContainer button {
-    border: none;
-    background-color: #ffffff;
-    margin-right: 20px;
+  border: none;
+  background-color: #ffffff;
+  margin-right: 20px;
 }
