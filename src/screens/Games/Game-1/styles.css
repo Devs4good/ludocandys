@@ -19,8 +19,14 @@
   margin: 40px 0 0 300px;
 }
 
-.game-container .container .dictation-score {
-  position: absolute;
-  right: 20px;
-  top: 210px;
+.speech-exercise {
+  text-align: left;
+}
+
+.speech-page {
+  padding: 0 150px;
+}
+
+.dictation-score.speech-score {
+  flex: 0;
 }

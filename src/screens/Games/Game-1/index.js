@@ -94,8 +94,8 @@ const QueLees = ({ history }) => {
   });
 
   return (
-    <div className='game-container'>
-      <div className='container'>
+    <div id='dictation-page' className='speech-page'>
+      <div className='dictation-exercise speech-exercise'>
         <header>
           <h2>Decí lo que lees</h2>
           <h3>Ejercicio {chosenPhrase.id}</h3>
@@ -109,11 +109,11 @@ const QueLees = ({ history }) => {
           </button>
           {canTalk && <p>Puedes empezar a hablar</p>}
         </div>
+      </div>
 
-        <div className='dictation-score'>
-          <div className='dictation-score-title'>PUNTOS</div>
-          <div className='dictation-score-number'>{points}</div>
-        </div>
+      <div className='dictation-score speech-score'>
+        <div className='dictation-score-title'>PUNTOS</div>
+        <div className='dictation-score-number'>{points}</div>
       </div>
     </div>
   );
