@@ -4,43 +4,53 @@
   margin-top: 50px;
   margin: auto;
   width: 40%;
+  max-width: 400px;
   min-height: 416px;
-  background-color: #FEC901;
+  /* background-color: #fec901; */
   position: "absolute";
 }
 a {
   text-decoration: none !important;
- }
+}
 
-.login{
+.login {
   height: calc(100vh - 120px);
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background: #f7971e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f7971e,
+    #ffd200
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f7971e,
+    #ffd200
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-
-.input-box{
+.input-box {
   display: flex;
   flex-direction: column;
   min-height: 160px;
   justify-content: space-between;
-
 }
-.input-container{
-
+.input-container {
   padding: 0 16px;
 }
-.input-container > span{
+.input-container > span {
   display: block;
   text-align: start;
 }
 
-.input-container > input{
+.input-container > input {
   min-width: 100%;
   border-radius: 4px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   min-height: 35px;
 }
 
@@ -50,25 +60,23 @@ a {
 
 .button-container > button {
   border-radius: 4px;
-
+  height: 40px;
 }
 
 .btn-close {
-  background-color: #FFFFFF;
-  color: #373A3C;
-  border: 1px solid #DDDDDD;
+  background-color: #ffffff;
+  color: #373a3c;
+  border: 1px solid #dddddd;
   margin-right: 10px;
 }
 
-.btn-enter{
-  background-color: #1C7CD5;
-  color: #FFFFFF;
+.btn-enter {
+  background-color: #1c7cd5;
+  color: #ffffff;
   border: 0px;
 }
 
-
-
-.loginContainer{
+.loginContainer {
   min-height: 416px;
   display: flex;
   flex-direction: column;
@@ -78,10 +86,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.head{
-  margin: 13px
+.head {
+  margin: 13px;
 }
 .head > .close {
   font-size: 16px;
 }
-
