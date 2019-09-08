@@ -9,7 +9,7 @@ function Menu() {
       <div className="image-container">
         <img src={ImagenFondo} alt="" />
       </div>
-      <div>
+      <div className="link">
         <a href="https://www.freepik.es/fotos-vectores-gratis/fondo">
           Vector de Fondo creado por freepik - www.freepik.es
         </a>
