@@ -34,7 +34,7 @@ export class DictationPage extends React.Component {
     const { exerciseId } = this.state;
     const { history } = this.props;
 
-    if (exerciseId === 2) history.push('/juegos/que-ves');
+    if (exerciseId === 2) history.push('/juegos/que-ves/1');
 
     this.setState({
       exercise: ExercisesRepository.exercises()[2],

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 
 /* Styles */
@@ -40,9 +40,21 @@ const Game3 = props => {
   } = props;
 
   const selectedExcercise = useMemo(
-    () => ({ ...exercises[id], options: exercises[id].options.sort(() => 0.5 - Math.random()) }),
+    () => {
+
+      if (!exercises[id]) return exercises[1];
+      return { ...exercises[id], options: exercises[id].options.sort(() => 0.5 - Math.random()) }
+
+    },
     [id]
   );
+
+  useEffect(() => {
+    if (selectedOption.isValid) {
+      setTimeout(() => props.history.push("/juegos/que-ves/2"), 1000);
+    }
+  }, [selectedOption]);
+
 
   /*
     1. Si fallo lo ponemos en rojo
@@ -68,7 +80,7 @@ const Game3 = props => {
                 <label
                   className={`exercise-option ${
                     selectedOption.text === option.text && selectedOption.isValid === true ? 'valid' : 'invalid'
-                  }`}
+                    }`}
                   key={option.text}
                 >
                   {option.text}
