@@ -24,3 +24,7 @@
 .letra:active {
   background-color: #FFCA01;
 }
+
+.letra {
+  background-color: white;
+}

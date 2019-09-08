@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import shuffle from "../../../utils/ArrayUtils";
 import "./Ejercicio.css";
-import Letra from "./Letra";
+import Letra from "../Letra";
 
 class Ejercicio extends Component {
   constructor(props) {

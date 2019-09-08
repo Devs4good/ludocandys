@@ -33,7 +33,7 @@ class Test extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "#FFCA01" }}>
         <Ejercicio key={`ejercicio-${this.state.examen}`} tamanio={this.state.size} alTerminar={(acierto) => {
           this.handleClick();
           if (acierto) {
@@ -48,7 +48,7 @@ class Test extends Component {
 
   irAResultados() {
     let rutaResultados = {
-      pathname: '/resultado',
+      pathname: '/juegos',
       state: {
         respuestasCorrectas: this.state.respuestaBien,
         tiempoRecord: '10:00'
