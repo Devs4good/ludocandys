@@ -12,6 +12,8 @@ import { DictationPage } from './screens/Games/Game-2/DictationPage';
 
 import Menu from './screens/Menu';
 
+import Login from './components/Login/index';
+
 function App() {
   return (
     <div className='App'>
@@ -24,6 +26,8 @@ function App() {
 
         <Route exact path='/juegos/que-ves' component={Game3} />
         <Route exact path='/juegos/que-ves/:id' component={Game3} />
+
+        <Route exact path='/login' component={Login} />
 
         <Route path='*' component={Menu} />
       </Switch>
