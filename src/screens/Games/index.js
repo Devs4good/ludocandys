@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Games = () => {
   return (
     <div>
-      <Link to='/juegos/que-ves'>
+      <Link to='/juegos/que-lees'>
         <button>Decí lo que lees</button>
       </Link>
       <Link to='/juegos/dictado'>
