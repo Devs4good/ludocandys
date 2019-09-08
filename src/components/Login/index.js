@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import "./login.css";
-import { Link } from "react-router-dom";
 
 
 class Login extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
 
   render() {
     return (
       <div className="login">
         <div className="loginBox">
 
-          <div className="container">
+          <div className="loginContainer">
 
           <div className="head">
           <span>LOGIN</span>
@@ -34,18 +31,13 @@ class Login extends Component {
             </div>
           </div>
 
-
           <div className="button-container">
             <button className="btn-close" onClick={() => console.log("aa")}>
-            <Link to="/">
-              CERRAR
-              </Link>
+              <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>CERRAR</Link>
             </button>
 
             <button className="btn-enter" onClick={() => console.log("aa")}>
-            <Link to="/juegos">
-              ENTRAR
-            </Link>
+              <Link to='/juegos' style={{ textDecoration: 'none', color: 'white' }}>ENTRAR</Link>
             </button>
           </div>
           </div>
