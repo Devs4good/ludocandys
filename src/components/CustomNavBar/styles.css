@@ -3,7 +3,8 @@
   justify-content: space-between;
   height: var(--navbar-height);
   align-items: center;
-  padding: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .image {
@@ -23,9 +24,18 @@
   padding: 0!important;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
 }
 
-.navbarContainer a:hover, a:visited, a:focus, a:hover, a:active {
+.navbarContainer button::before, button::after {
+  outline: none;
+}
+
+.navbarContainer button:hover, button:focus, button:active {
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
   text-decoration: none;
   color: #FB4D4F;
+  outline:0 !important;
 }

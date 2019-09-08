@@ -41,7 +41,7 @@
   border: 0px;
 }
 
-.container {
+.loginBox {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -49,7 +49,7 @@
   justify-content: space-between;
 }
 
-.container > p {
+.loginBox > p {
   margin: 15px;
   text-align: start;
 }

@@ -1,33 +1,39 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import image from './image.png';
-import styles from './styles.css';
+import image from "./image.png";
+import "./styles.css";
 
 class CustomNavBar extends Component {
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   toggle = () => {
     this.setState({
-      isOpen: !this.state.isOpen,
+      isOpen: !this.state.isOpen
     });
   };
 
   render() {
     return (
-      <div class='navbarContainer'>
+      <div className="navbarContainer">
         <div>
-          <img className='image' src={image} />
+          <Link to="/">
+            <img className="image" alt="navbar" src={image} />
+          </Link>
         </div>
 
-        <div class='buttonsContainer'>
-          <button>INICIO</button>
-          <button>
-            <Link to='/juegos'>JUEGOS</Link>
-          </button>
-          <button>LOGIN</button>
+        <div className="buttonsContainer">
+          <Link to="/">
+            <button>INICIO</button>
+          </Link>
+          <Link to="/juegos">
+            <button>JUEGOS</button>
+          </Link>
+          <Link to="/login">
+            <button>LOGIN</button>
+          </Link>
         </div>
       </div>
     );
