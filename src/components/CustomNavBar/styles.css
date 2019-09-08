@@ -18,18 +18,24 @@
 }
 
 .navbarContainer button {
+  background: none!important;
   border: none;
-  background-color: #ffffff;
   margin-right: 20px;
+  padding: 0!important;
   text-decoration: none;
-  transition: 1s;
-  height: 40px;
-  border-radius: 5px;
-
-  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
 }
-.navbarContainer button:hover {
-  transform: scale(1.05);
-  color: #0d417a;
-  border: 2px solid #0d417a;
+
+.navbarContainer button::before, button::after {
+  outline: none;
+}
+
+.navbarContainer button:hover, button:focus, button:active {
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+  text-decoration: none;
+  color: #FB4D4F;
+  outline:0 !important;
 }

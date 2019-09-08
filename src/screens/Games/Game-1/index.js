@@ -11,35 +11,27 @@ import './styles.css';
 import removeAccents from '../../../utils/accents';
 
 const phrasesPreloaded = {
-  1: { id: '1', text: 'La masa blanca estaba blanda', didWin: null },
+  1: { id: '1', text: 'Un barco chico navega por el mar', didWin: null },
   2: { id: '2', text: 'La paloma se poso en el palo', didWin: null },
 };
 
-const QueLees = () => {
+const QueLees = ({ history }) => {
+  const [points, setPoints] = useState(0);
   const [phrases, setPhrases] = useState(phrasesPreloaded);
-  console.log('TCL: QueLees -> phrases', phrases);
-  const [chosenPhrase, setChosenPhrase] = useState(phrases[randomPhrase()]);
-  console.log('TCL: QueLees -> chosenPhrase', chosenPhrase);
-
-  function randomPhrase() {
-    const number = Math.floor(Math.random() * Object.keys(phrasesPreloaded).length + 1);
-    return number;
-  }
+  const [chosenPhrase, setChosenPhrase] = useState(phrases[1]);
+  const [canTalk, setCanTalk] = useState(false);
 
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
-
-    const resultPara = document.querySelector('.result');
     const testBtn = document.querySelector('.start-button');
+    let didWinCurrentPhrase = null;
 
     function testSpeech() {
       testBtn.disabled = true;
       testBtn.textContent = 'Prueba en progreso';
 
       let phrase = chosenPhrase.text.toLowerCase();
-      resultPara.textContent = 'Bien o mal?';
-      resultPara.style.background = 'rgba(0,0,0,0.2)';
 
       const grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + chosenPhrase + ';';
       const recognition = new SpeechRecognition();
@@ -53,35 +45,48 @@ const QueLees = () => {
 
       recognition.start();
 
+      recognition.onstart = function() {
+        setCanTalk(true);
+      };
+
       recognition.onresult = function(event) {
         const speechResult = event.results[0][0].transcript.toLowerCase();
         console.log('TCL: recognition.onresult -> speechResult', speechResult);
 
         if (removeAccents(speechResult) === phrase.toLowerCase()) {
-          resultPara.textContent = 'Todo estuvo OK!!';
-          resultPara.style.background = 'lime';
           setPhrases(prevPhrases => ({
             ...prevPhrases,
             [chosenPhrase.id]: { ...prevPhrases[chosenPhrase.id], didWin: true },
           }));
 
+          setPoints(prevPoints => prevPoints + 5);
           Speak('Felicitaciones sumaste 5 puntos');
+          didWinCurrentPhrase = true;
         } else {
           setPhrases(prevPhrases => ({
             ...prevPhrases,
             [chosenPhrase.id]: { ...prevPhrases[chosenPhrase.id], didWin: false },
           }));
-          Speak('Buuuu!');
-
-          resultPara.textContent = 'Mmmm... Uff... Mal.';
-          resultPara.style.background = 'red';
+          Speak('Prueba de nuevo!');
+          didWinCurrentPhrase = false;
         }
       };
 
       recognition.onspeechend = function() {
         testBtn.disabled = false;
         testBtn.textContent = 'Empezar nuevo test';
-        setChosenPhrase(prevState => phrases[randomPhrase()]);
+        setCanTalk(false);
+        console.log('TCL: recognition.onspeechend -> didWinCurrentPhrase', didWinCurrentPhrase);
+
+        setTimeout(() => {
+          if (didWinCurrentPhrase) {
+            const nextPhrase = phrases[Number(chosenPhrase.id) + 1];
+            if (!nextPhrase) history.push('dictado');
+            setChosenPhrase(nextPhrase);
+          }
+
+          didWinCurrentPhrase = null;
+        }, 400);
       };
     }
 
@@ -91,19 +96,24 @@ const QueLees = () => {
   return (
     <div className='game-container'>
       <div className='container'>
-        <Exercise title={'EJERCICIO1'}>
-          <div className='speech-reco-text'>{chosenPhrase.text}</div>
+        <header>
+          <h2>Decí lo que lees</h2>
+          <h3>Ejercicio {chosenPhrase.id}</h3>
+        </header>
 
-          <div>
-            <button onClick={() => {}} className='start-button'>
-              <img src={micIcon} />
-            </button>
+        <div className='speech-reco-text'>{chosenPhrase.text}</div>
 
-            <div>
-              <p className='result'>Bien o mal?</p>
-            </div>
-          </div>
-        </Exercise>
+        <div>
+          <button onClick={() => {}} className='start-button'>
+            <img src={micIcon} />
+          </button>
+          {canTalk && <p>Puedes empezar a hablar</p>}
+        </div>
+
+        <div className='dictation-score'>
+          <div className='dictation-score-title'>PUNTOS</div>
+          <div className='dictation-score-number'>{points}</div>
+        </div>
       </div>
     </div>
   );
