@@ -18,24 +18,27 @@
 }
 
 .navbarContainer button {
-  background: none!important;
+  background: none !important;
   border: none;
   margin-right: 20px;
-  padding: 0!important;
+  padding: 0 !important;
   text-decoration: none;
   cursor: pointer;
   outline: none;
 }
 
-.navbarContainer button::before, button::after {
+.navbarContainer button::before,
+button::after {
   outline: none;
 }
 
-.navbarContainer button:hover, button:focus, button:active {
+.navbarContainer button:hover,
+button:focus,
+button:active {
   -webkit-box-sizing: content-box !important;
   -moz-box-sizing: content-box !important;
   box-sizing: content-box !important;
   text-decoration: none;
-  color: #FB4D4F;
-  outline:0 !important;
+  color: #fb4d4f;
+  outline: 0 !important;
 }
