@@ -1,6 +1,7 @@
 import Speech from 'speak-tts';
 
-const speech = new Speech()
+const speech = new Speech();
+
 let speaker = speech.init({
   'volume': 1,
   'lang': 'es-US',
@@ -40,7 +41,7 @@ function speak(customText) {
     })
 
   });
-};
+}
 
 
 export default speak;

@@ -1,0 +1,62 @@
+#dictation-page {
+  background-color: #FFCA01;
+  height: calc(100vh - 120px);
+  display: flex;
+}
+
+.dictation-exercise {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.dictation-exercise-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.dictation-exercise-icons img {
+  width: 113px;
+  height: 75px;
+  margin: auto 15px;
+}
+
+.dictation-exercise-title {
+  font-size: 5vw;
+}
+
+.dictation-score {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dictation-score div {
+  margin: 20px 0;
+}
+
+.dictation-score-title {
+  font-size: 5vw;
+}
+
+.dictation-score-number {
+  font-size: 10vw;
+}
+
+.dictation-score-button button {
+  margin: 5px;
+  border: none;
+  background-color: white;
+  height: 40px;
+}
+
+.dictation-exercise textarea {
+  border: none;
+  box-shadow: 0 3px 6px #00000029;
+  border-radius: 19px;
+  opacity: 1;
+  margin: 0 1vw;
+}

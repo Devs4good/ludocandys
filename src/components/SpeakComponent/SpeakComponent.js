@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import './masInfo.css';
 import Speak from "./Speak";
 
 class SpeakComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   callToSpeak() {
     Speak("La paloma se posó en el palo");
   }
