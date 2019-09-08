@@ -1,0 +1,17 @@
+.game-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  margin: 16px;
+  color: #FB4D4F;
+  border-radius: 19px;
+  padding: 2vw;
+  align-items: center;
+  height: 250px;
+}
+
+.game-option img {
+  width: 170px;
+  height: 138px;
+}

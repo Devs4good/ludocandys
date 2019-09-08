@@ -1,0 +1,26 @@
+#games-page {
+  background-color: #FFCA01;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.games-description {
+  color: white;
+  padding-top: 50px;
+  margin: 0 200px;
+  flex: 1;
+}
+
+.games-options {
+  flex: 1 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.games-options a {
+  text-decoration: none;
+  flex-basis: 260px;
+}
+
