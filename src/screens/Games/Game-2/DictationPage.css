@@ -1,5 +1,5 @@
 #dictation-page {
-  background-color: #FFCA01;
+  background-color: #ffca01;
   height: calc(100vh - 120px);
   display: flex;
 }
@@ -59,4 +59,7 @@
   border-radius: 19px;
   opacity: 1;
   margin: 0 1vw;
+}
+
+.userInput {
 }
