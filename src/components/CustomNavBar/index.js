@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import image from './image.png';
-import styles from './styles.css';
+import './styles.css';
 
 class CustomNavBar extends Component {
   state = {
@@ -17,17 +17,25 @@ class CustomNavBar extends Component {
 
   render() {
     return (
-      <div class='navbarContainer'>
-        <div>
-          <img className='image' src={image} />
-        </div>
+      
+      <div className='navbarContainer'>
 
-        <div class='buttonsContainer'>
-          <button>INICIO</button>
+        <div>
+       <Link to="/">
+          <img className='image' alt="navbar" src={image} />
+       </Link>
+       </div>
+
+        <div className='buttonsContainer'>
+          <button>
+            <Link to='/'>INICIO</Link>
+          </button>
           <button>
             <Link to='/juegos'>JUEGOS</Link>
           </button>
-          <button>LOGIN</button>
+            <button>
+            <Link to='/login'>LOGIN</Link>
+            </button>
         </div>
       </div>
     );

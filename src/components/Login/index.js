@@ -9,7 +9,9 @@ class Login extends Component {
   render() {
     return (
       <div className="login">
-        <div className="container">
+        <div className="loginBox">
+
+          div
 
           <p>LOGIN</p>
 
