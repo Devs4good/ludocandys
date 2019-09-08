@@ -1,25 +1,50 @@
-.login {
-  flex: 1;
+.loginBox {
+  display: flex;
   flex-direction: column;
   margin-top: 50px;
   margin: auto;
-  width: 60%;
+  width: 40%;
   min-height: 416px;
   background-color: #FEC901;
   position: "absolute";
 }
+a {
+  text-decoration: none !important;
+ }
 
-.main-container > span{
-  margin-left: 20px;
+.login{
+  height: calc(100vh - 120px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.input-box{
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+  justify-content: space-between;
+
+}
+.input-container{
+
+  padding: 0 16px;
+}
+.input-container > span{
   display: block;
   text-align: start;
 }
 
-.main-container > input{
-  min-width: 90%;
+.input-container > input{
+  min-width: 100%;
+  border-radius: 4px;
+  border: 1px solid #DDDDDD;
+  min-height: 35px;
 }
 
-.button-container {  
+.button-container {
   margin-bottom: 10px;
 }
 
@@ -41,15 +66,22 @@
   border: 0px;
 }
 
-.loginBox {
+
+
+.container{
+  min-height: 416px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  min-height: 416px;
   justify-content: space-between;
 }
-
-.loginBox > p {
-  margin: 15px;
-  text-align: start;
+.container > .head {
+  display: flex;
+  justify-content: space-between;
 }
+.head{
+  margin: 13px
+}
+.head > .close {
+  font-size: 16px;
+}
+
