@@ -20,7 +20,7 @@ const Games = () => {
         <GameOption to="/juegos/que-ves/1" src={seleccionaLoQueVes} alt="Seleccioná lo que ves">
           Seleccioná lo que ves
         </GameOption>
-        <GameOption to="/juegos/que-ves/2" src={seleccionaLaLetraCorrecta} alt="Seleccioná la letra correcta">
+        <GameOption to="/juegos/letra-correcta" src={seleccionaLaLetraCorrecta} alt="Seleccioná la letra correcta">
           Seleccioná la letra correcta
         </GameOption>
       </div>
