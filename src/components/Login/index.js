@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import "./login.css";
 
 class Login extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
 
   render() {
     return (
       <div className="login">
         <div className="loginBox">
 
-          div
-
           <p>LOGIN</p>
 
-
           <div>
-
-
             <div className="main-container">
               <span>Nombre de usuario </span>
               <input type="text" name="name" />
@@ -29,13 +22,12 @@ class Login extends Component {
             </div>
           </div>
 
-
           <div className="button-container">
             <button className="btn-close" onClick={() => console.log("aa")}>
-              CERRAR
+              <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>CERRAR</Link>
             </button>
             <button className="btn-enter" onClick={() => console.log("aa")}>
-              ENTRAR
+              <Link to='/juegos' style={{ textDecoration: 'none', color: 'white' }}>ENTRAR</Link>
             </button>
           </div>
         </div>

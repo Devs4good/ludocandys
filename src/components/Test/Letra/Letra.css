@@ -1,0 +1,26 @@
+.letra,
+.letraVerde,
+.letraRoja {
+  width: 30%;
+  font-size: 2em;
+  padding: .5em;
+  margin: .1em;
+  border-radius: 10px;
+  box-shadow: -3px 3px 0px 0px rgba(0,0,0,.1);
+  transition: background-color .8s;
+}
+
+.letraVerde {
+  background-color: #66E2DC;
+  box-shadow: inset -3px 3px 0px 0px rgba(0,0,0,.1);
+
+}
+
+.letraRoja {
+  background-color: #FB4D4F;
+  box-shadow: inset -3px 3px 0px 0px rgba(0,0,0,.1);
+}
+
+.letra:active {
+  background-color: #FFCA01;
+}
