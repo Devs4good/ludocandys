@@ -44,6 +44,11 @@ const Game3 = props => {
     [id]
   );
 
+  /*
+    1. Si fallo lo ponemos en rojo
+    2. Mostramos un toast y re-ordenamos el array
+  */
+
   return (
     <div className='game-container'>
       <div className='container'>
@@ -62,7 +67,7 @@ const Game3 = props => {
               return (
                 <label
                   className={`exercise-option ${
-                    selectedOption.text === option.text && selectedOption.isValid === true ? 'valid' : ''
+                    selectedOption.text === option.text && selectedOption.isValid === true ? 'valid' : 'invalid'
                   }`}
                   key={option.text}
                 >

@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const Games = () => {
   return (
     <div>
-      <Link to='/games/game-1'>
+      <Link to='/juegos/game-1'>
         <button>Decí lo que lees</button>
       </Link>
-      <Link to='/games/game-2'>
+      <Link to='/juegos/dictado'>
         <button>Escribí lo que escuchás</button>
       </Link>
-      <Link to='/games/selecciona-lo-que-ves/1'>
+      <Link to='/juegos/selecciona-lo-que-ves/1'>
         <button>Seleccioná lo que ves</button>
       </Link>
     </div>
